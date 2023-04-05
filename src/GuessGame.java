@@ -22,11 +22,15 @@ public class GuessGame {
         Scanner sc = new Scanner(System.in);
         
         int x, n, ni;
-        x = sc.nextInt(); // This is the number that Player 1 inputs
-        n = sc.nextInt(); // Number of tries that Player 2 gets
+
+        System.out.print("Enter a number to be guessed: ");
+        x = sc.nextInt();
+        System.out.print("Enter how many tries player-2 gets: ");
+        n = sc.nextInt();
         
         for (int i = n; i > 0; i--) {
             n--;
+            System.out.print("Guess the number: ");
             ni = sc.nextInt(); // Player 2 guessed
             if (ni == x) {
                 System.out.println("Right, Player-2 wins!");
