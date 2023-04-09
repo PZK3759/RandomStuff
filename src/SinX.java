@@ -14,15 +14,14 @@ import java.lang.Math;
 public class SinX {
     
     static double fact(double f){
-        
-        double fact=1;
-        
-        for (double i = f; i > 0; i--) {
-            fact = fact*i;
+
+        if (f == 1){
+            return 1;
         }
-        
-        return fact;
-        
+        else {
+            return f*fact(f-1);
+        }
+
     }
     
     public static void main(String[] args) {
